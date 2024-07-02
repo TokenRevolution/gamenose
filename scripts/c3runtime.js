@@ -4972,6 +4972,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Cnds.OnItemGet,
 		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.LocalStorage.Cnds.OnItemMissing,
+		C3.Plugins.Browser.Acts.GoToURL,
+		C3.Plugins.Browser.Acts.ExecJs,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Plugins.TiledBg.Acts.SetVisible
 	];
@@ -5328,7 +5330,9 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
 			return () => f0(f1(), 7);
-		}
+		},
+		() => "https://nose.box/game",
+		() => "sendScore(playerName, score);"
 ];
 
 
