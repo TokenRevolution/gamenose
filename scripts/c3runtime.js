@@ -5231,6 +5231,10 @@ self.C3_ExpressionFuncs = [
 		() => "winScreen",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ("" + f0("playerKey"));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("playerKey");
 		},
 		p => {
