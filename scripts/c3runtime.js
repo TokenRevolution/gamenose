@@ -5071,7 +5071,7 @@ self.C3_JsPropNameTable = [
 	{speed: 0},
 	{best_score: 0},
 	{win: 0},
-	{Address: 0},
+	{address: 0},
 	{active_movement: 0},
 	{saveScore: 0},
 	{sound: 0}
