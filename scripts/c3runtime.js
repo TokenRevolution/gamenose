@@ -5230,14 +5230,14 @@ self.C3_ExpressionFuncs = [
 		() => "Initial_Settings",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("playerAddress");
+			return () => f0("playerKey");
 		},
+		() => "winScreen",
+		() => 0.6,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => "winScreen",
-		() => 0.6,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
