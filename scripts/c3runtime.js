@@ -4924,11 +4924,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.AJAX,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Browser.Exps.QueryParam,
 		C3.Plugins.Browser.Acts.ConsoleLog,
-		C3.Plugins.System.Acts.SetBoolVar,
-		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
@@ -5228,11 +5228,15 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => "Initial_Settings",
+		() => "winScreen",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("playerKey");
 		},
-		() => "winScreen",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ("Address trovato" + v0.GetValue());
+		},
 		() => 0.6,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
